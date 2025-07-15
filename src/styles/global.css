@@ -316,13 +316,19 @@ p {
 .shadow-lg { box-shadow: var(--shadow-lg); }
 
 /* 대형 화면 최적화 */
+@media (min-width: 1200px) {
+  :root {
+    --container-max-width: 95vw;
+  }
+}
+
 @media (min-width: 1600px) {
   html {
     font-size: 18px;
   }
   
   :root {
-    --container-max-width: 1600px;
+    --container-max-width: 92vw;
   }
 }
 
@@ -332,7 +338,7 @@ p {
   }
   
   :root {
-    --container-max-width: 1800px;
+    --container-max-width: 90vw;
   }
 }
 
