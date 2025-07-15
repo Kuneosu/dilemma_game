@@ -1,12 +1,10 @@
 @import '../styles/variables.css';
 
 .home-page {
-  min-height: calc(100vh - 64px);
-  padding: var(--spacing-8) 0;
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-  padding-left: var(--spacing-6);
-  padding-right: var(--spacing-6);
+  flex: 1;
+  width: 100%;
+  padding: var(--spacing-8) var(--spacing-6);
+  background-color: var(--color-bg-primary);
 }
 
 .hero-section {

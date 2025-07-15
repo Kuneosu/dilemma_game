@@ -1,14 +1,13 @@
 @import '../styles/variables.css';
 
 .game-page {
+  flex: 1;
   display: grid;
   grid-template-columns: 350px 1fr;
   gap: var(--spacing-10);
-  min-height: calc(100vh - 200px);
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-  padding: 0 var(--spacing-6);
   width: 100%;
+  padding: var(--spacing-8) var(--spacing-6);
+  background-color: var(--color-bg-primary);
 }
 
 .game-sidebar {
