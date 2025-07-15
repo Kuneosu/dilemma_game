@@ -19,7 +19,8 @@ body {
   font-weight: var(--font-weight-normal);
   line-height: var(--line-height-normal);
   color: var(--color-text-primary);
-  background-color: var(--color-bg-secondary);
+  background: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-neutral-100) 100%);
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -315,30 +316,16 @@ p {
 .shadow-md { box-shadow: var(--shadow-md); }
 .shadow-lg { box-shadow: var(--shadow-lg); }
 
-/* 대형 화면 최적화 */
-@media (min-width: 1200px) {
-  :root {
-    --container-max-width: 95vw;
-  }
-}
-
+/* 대형 화면 최적화 - 고정 최대값 유지 */
 @media (min-width: 1600px) {
   html {
     font-size: 18px;
-  }
-  
-  :root {
-    --container-max-width: 92vw;
   }
 }
 
 @media (min-width: 1920px) {
   html {
     font-size: 20px;
-  }
-  
-  :root {
-    --container-max-width: 90vw;
   }
 }
 
