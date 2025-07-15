@@ -1,0 +1,120 @@
+@import '../styles/variables.css';
+
+.game-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-neutral-100) 100%);
+}
+
+.game-header {
+  background-color: var(--color-bg-primary);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-4) var(--spacing-6);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.game-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin: 0;
+  text-align: center;
+}
+
+.game-progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-3);
+}
+
+.round-indicator {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
+.progress-bar {
+  width: 200px;
+  height: 8px;
+  background-color: var(--color-neutral-200);
+  border-radius: var(--border-radius-xl);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary) 0%, #60a5fa 100%);
+  border-radius: var(--border-radius-xl);
+  transition: width var(--transition-normal);
+}
+
+.game-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-8) var(--spacing-6);
+}
+
+.content-container {
+  max-width: var(--container-max-width);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.game-footer {
+  background-color: var(--color-bg-primary);
+  border-top: 1px solid var(--color-border);
+  padding: var(--spacing-4) var(--spacing-6);
+  text-align: center;
+}
+
+.step-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.current-step {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  padding: var(--spacing-2) var(--spacing-4);
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  border-radius: var(--border-radius-xl);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .game-header {
+    padding: var(--spacing-3) var(--spacing-4);
+  }
+  
+  .game-title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .game-progress {
+    flex-direction: column;
+    gap: var(--spacing-2);
+    margin-top: var(--spacing-2);
+  }
+  
+  .progress-bar {
+    width: 150px;
+  }
+  
+  .game-content {
+    padding: var(--spacing-6) var(--spacing-4);
+  }
+  
+  .game-footer {
+    padding: var(--spacing-3) var(--spacing-4);
+  }
+}

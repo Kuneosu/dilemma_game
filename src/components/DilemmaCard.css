@@ -1,0 +1,141 @@
+@import '../styles/variables.css';
+
+.dilemma-card {
+  background-color: var(--color-bg-primary);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: slideInUp 0.6s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dilemma-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-6);
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-neutral-100) 100%);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.dilemma-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.difficulty-badge {
+  padding: var(--spacing-2) var(--spacing-4);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--border-radius-xl);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.difficulty-badge.difficulty-easy {
+  background-color: var(--color-success-light);
+  color: var(--color-difficulty-easy);
+}
+
+.difficulty-badge.difficulty-medium {
+  background-color: var(--color-warning-light);
+  color: var(--color-difficulty-medium);
+}
+
+.difficulty-badge.difficulty-hard {
+  background-color: var(--color-danger-light);
+  color: var(--color-difficulty-hard);
+}
+
+.dilemma-content {
+  padding: var(--spacing-8);
+}
+
+.scenario-section h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-4);
+  padding-bottom: var(--spacing-2);
+  border-bottom: 2px solid var(--color-primary-light);
+}
+
+.scenario-text {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-primary);
+}
+
+.scenario-text p {
+  margin-bottom: var(--spacing-4);
+}
+
+.scenario-text p:last-child {
+  margin-bottom: 0;
+}
+
+.scenario-text strong {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+}
+
+.dilemma-actions {
+  padding: var(--spacing-6);
+  background-color: var(--color-bg-tertiary);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.dilemma-actions .btn {
+  min-width: 200px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .dilemma-card {
+    margin: 0 var(--spacing-4);
+    border-radius: var(--border-radius-lg);
+  }
+  
+  .dilemma-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-3);
+    padding: var(--spacing-4);
+  }
+  
+  .dilemma-title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .dilemma-content {
+    padding: var(--spacing-6);
+  }
+  
+  .scenario-text {
+    font-size: var(--font-size-base);
+  }
+  
+  .dilemma-actions {
+    padding: var(--spacing-4);
+  }
+  
+  .dilemma-actions .btn {
+    min-width: auto;
+    width: 100%;
+  }
+}
