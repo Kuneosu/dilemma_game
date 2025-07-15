@@ -315,6 +315,27 @@ p {
 .shadow-md { box-shadow: var(--shadow-md); }
 .shadow-lg { box-shadow: var(--shadow-lg); }
 
+/* 대형 화면 최적화 */
+@media (min-width: 1600px) {
+  html {
+    font-size: 18px;
+  }
+  
+  :root {
+    --container-max-width: 1600px;
+  }
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 20px;
+  }
+  
+  :root {
+    --container-max-width: 1800px;
+  }
+}
+
 /* 반응형 */
 @media (max-width: 768px) {
   html {

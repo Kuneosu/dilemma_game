@@ -1,7 +1,7 @@
 @import '../styles/variables.css';
 
 .how-to-play-page {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: var(--spacing-8) var(--spacing-6);
 }
@@ -88,8 +88,8 @@
 
 .steps-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--spacing-6);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-8);
 }
 
 .step-card {
